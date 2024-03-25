@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sum of Two Numbers</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+  }
+  .container {
+    text-align: center;
+  }
+  input[type="number"] {
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #5cb85c;
+    color: white;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #4cae4c;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Sum of Two Numbers</h1>
+  <input type="number" id="num1" placeholder="Enter first number">
+  <input type="number" id="num2" placeholder="Enter second number">
+  <button onclick="calculateSum()">Calculate Sum</button>
+  <h2 id="result"></h2>
+</div>
+<script>
+  function calculateSum() {
+    var number1 = parseFloat(document.getElementById('num1').value);
+    var number2 = parseFloat(document.getElementById('num2').value);
+    var sum = number1 + number2;
+    document.getElementById('result').innerText = 'Sum: ' + sum;
+  }
+</script>
+</body>
+</html>
